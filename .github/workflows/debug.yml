@@ -19,7 +19,7 @@ jobs:
         continue-on-error: true
         run: |
           echo "${{ secrets.GH_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-          docker run --privileged --rm -i docker.pkg.github.com/carbonatedblack/vcbot/vclatest:latest
+          docker run --privileged --rm -i docker.pkg.github.com/elytra8/community-vc/community-vc:main
 
       - name: Loop Workflow
         continue-on-error: true
